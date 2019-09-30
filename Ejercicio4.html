@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 4</title>
+    <LINK REL="stylesheet" HREF="ejercicio4.css"/>
+   <meta name="viewport" content="width=device-width,initialscale=1"/>
+</head>
+<body> 
+    <h2>Ficha de inscripcion</h2>
+    <fieldset>
+        <legend>Datos identificativos</legend>
+        <form name="indentificacion">
+            <table>
+                <tr>
+                    <td>Codigo de suscripcion:</td>
+                    <td><input type="text" value="INS-00123" maxlength="10" readonly></td>
+                </tr>
+                <tr>
+                    <td>Numero de socios:</td>
+                    <td><input type="text" value="123" maxlength="10" disabled></td>
+                </tr>
+                <tr>
+                    <td>Usuario:</td>
+                    <td><input type="text" maxlength="10" required></td>
+                </tr>
+                <tr>
+                    <td>Contraseña:</td>
+                    <td><input type="password" maxlength="10" required></td>
+                </tr>
+                <tr>
+                    <td>Repite contraseña:</td>
+                    <td><input type="password" maxlength="10" required></td>
+                </tr>
+                <tr>
+                    <td>Nombre completo:</td>
+                    <td><input type="text" max="30" maxlength="30" autofocus></td>
+                </tr>
+                <tr>
+                    <td>Dni:</td>
+                    <td><input type="text" name="dni"maxlength="8" max="10" pattern="[0-9]{0,8}" title="Introduzca 8 numeros unicamente"></td>
+                </tr>
+                <tr>
+                    <td>Letra:</td>
+                    <td><input type="text" maxlength="1" max="2" name="letra" pattern="[A-Z]" title="Introduzca una letra mayuscula"></td>
+                </tr>
+                <tr>
+                    <td>Direccion:</td>
+                    <td><input type="text" maxlength="30"></td>
+                </tr>
+                <tr>
+                    <td>Ciudad:</td>
+                    <td><input type="text" maxlength="15"></td>
+                </tr>
+                <tr>
+                    <td>Codigo Postal:</td>
+                    <td><input type="text" maxlength="5" pattern="[0-9]{0,5}" title="Codigo postal invalido"></td>
+                </tr>
+                <tr>
+                    <td>Pais</td>
+                    <td><input type="text" value="Francia" disabled maxlength="7"></td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>Datos Bancarios</legend>
+        <form name="banca" action="post">
+            Visa <input type="radio" name="tipo" value="Visa"/>
+            Mastercard<input type="radio" name="tipo" value="MasterCard" checked/>
+            American Express<input type="radio" name="tipo" value="American Express"/>
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>Aficiones</legend>
+        <form name="aficiones">
+            Leer<input type="checkbox" value="leer" checked>
+            Viajar<input type="checkbox" value="viajar" checked>
+            Escuchar Musica<input type="checkbox" value="musica" checked>
+            Deportes<input type="checkbox" value="deportes" checked>
+            Montaña<input type="checkbox" value="montaña" checked>
+            Juegos de Estrategia<input type="checkbox" value="juegos" checked>
+            <details>
+               <summary>Mas detalles</summary>
+                Informatica<input type="checkbox" value="Informatica"/>
+                Jogging<input type="checkbox" value="Jogging"/>
+                Cine<input type="checkbox" value="Cine"/>
+            </details>
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>Enviar informacion</legend>
+        <form name="opciones">
+            <details>
+               <summary>Mas opciones</summary>
+                <p>Adjuntar resguardo de pago(PDF): <input type="file" name="Seleccionar" value="Seleccionar archivo"/></p>
+            </details>
+            <p><input type="submit" value="Enviar" name="enviar"/>
+            <input type="reset" value="limpiar" name="limpiar"/></p>
+        </form>
+    </fieldset>
+</body>
+</html>
